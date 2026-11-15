@@ -1,6 +1,8 @@
 Nama    : Muhammad Gathfaan Nur Aziz Suhendar
 Kelas   : PBP F
 NPM     : 2506609214
+
+
 ### Tugas 7
 
 1. Jelaskan apa yang dimaksud dengan widget tree pada Flutter dan bagaimana hubungan induk-anak (parent-child) bekerja antar-widget!
@@ -44,3 +46,4 @@ SnackBar	    : Menampilkan pemberitahuan singkat setelah pengguna menekan kartu.
 5. BuildContext adalah suatu pedoman ke suatu posisi dari sebuah widget di dalam pohon widget. kode dapat mencari fitur terdekat yang disediakan oleh leluhur/parentsnya. 
 6. hot reload dapat refresh atau merender perubahan kode dart dan membangun ulang tampilan sambil pempertahankan state aplikasi tanpa perlu menjalankan ulang main() atau initState(). hot reload biasanya digunakan ketika terdapat perubahan tampilan pada teks atau warna pada tombol.hot restart memulai ulang aplikasi flutter dari main() dan menghapus state yang sedang berjalan. hot restart biasanya digunakan ketika memerlukan state awal aplikasi atau ulang inisialisasi. hot restart namun tidak menutup seluruh aplikasi. full restart menghentikan lalu menjalankan ulang aplikasi termasuk bagian platform. perlu ketika mengubah kode native di android/ios. hot restart dan hot reload terdapat perbedaan di berubah atau tidaknya state aplikasi. hot reload tidak mengubah state aplikasi, sedangkan hot restart mengubah stat aplikasi kedalam keadaan awal. 
 
+Saya menggunakan bantuan AI Claude dan ChatGPT dalam memahami bagaimana cara mengubah warna pada tombol lihat project, tambah project, dan logout. 
