@@ -1,23 +1,28 @@
 import 'package:flutter_test/flutter_test.dart';
+import 'package:http/http.dart' as http;
+import 'package:http/testing.dart';
 import 'package:myportofolio_mobile/main.dart';
+import 'package:myportofolio_mobile/services/api_client.dart';
 
 void main() {
-  testWidgets('Home opens the project form and validates required fields', (
+  testWidgets('Adding a project asks for login and validates credentials', (
     WidgetTester tester,
   ) async {
-    await tester.pumpWidget(const MyApp());
+    final apiClient = ApiClient(
+      client: MockClient((_) async => http.Response('[]', 200)),
+    );
+    await tester.pumpWidget(MyApp(apiClient: apiClient));
 
     expect(find.text('MyPortfolio'), findsOneWidget);
 
     await tester.tap(find.text('Tambah Proyek'));
     await tester.pumpAndSettle();
 
-    expect(find.text('Add Project Form'), findsOneWidget);
-
-    await tester.tap(find.text('Save'));
+    expect(find.text('Login'), findsWidgets);
+    await tester.tap(find.text('Login').first);
     await tester.pumpAndSettle();
 
-    expect(find.text('Nama proyek tidak boleh kosong!'), findsOneWidget);
-    expect(find.text('Deskripsi proyek tidak boleh kosong!'), findsOneWidget);
+    expect(find.text('Username tidak boleh kosong.'), findsOneWidget);
+    expect(find.text('Password tidak boleh kosong.'), findsOneWidget);
   });
 }

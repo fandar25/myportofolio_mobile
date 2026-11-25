@@ -12,6 +12,9 @@
 .swiftpm/
 migrate_working_dir/
 
+# Generated json_serializable files
+*.g.dart
+
 # IntelliJ related
 *.iml
 *.ipr
